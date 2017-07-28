@@ -14,16 +14,21 @@ namespace FrogAndBear
     {
         private Texture2D FrogTexture;
         private Frog Frog;
+        private Bear Bear;
         private Texture2D SecondTexture;
         private List<Second> Seconds;
+        private Texture2D BearTexture;
         private double TimeForSecond;
         public PlayScreen()
         {
             TimeForSecond = 0;
             FrogTexture = Game1.Frog;
             SecondTexture = Game1.Second;
+            BearTexture = Game1.Bear;
             Seconds = new List<Second>();
             Frog = new Frog() { Texture=FrogTexture, Position= new Vector2() { X = 80, Y = 500 }, Center = new Vector2() { X = 0, Y = 0} ,Direction=SpriteEffects.None};
+            Bear = new Bear();
+            Bear.Initialize(BearTexture, new Vector2() { X = 80, Y = 90 },new Vector2() { X=0,Y=0});
         }
         public override void Initialize()
         {
@@ -46,6 +51,10 @@ namespace FrogAndBear
             {
                 Frog.Direction = SpriteEffects.FlipHorizontally;
                 Frog.Position.X += 6;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                Bear.Direction = SpriteEffects.FlipHorizontally;
             }
             if (gametime.TotalGameTime.TotalMilliseconds>=TimeForSecond+1000)
             {
@@ -74,7 +83,7 @@ namespace FrogAndBear
         }
         public override void Draw(GameTime gametime)
         {
-            PublicMember.GraphicsDevice.Clear(Color.Red);
+            PublicMember.GraphicsDevice.Clear(Color.Azure);
             PublicMember.SpriteBactch.Begin();
             if (Seconds.Count>0)
             {
@@ -86,6 +95,7 @@ namespace FrogAndBear
             }
 
             Frog.Draw(PublicMember.SpriteBactch);
+            Bear.Draw(PublicMember.SpriteBactch);
             PublicMember.SpriteBactch.End();
             base.Draw(gametime);
         }

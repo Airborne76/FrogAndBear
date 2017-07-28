@@ -18,6 +18,7 @@ namespace FrogAndBear
         public static Texture2D ButtonExit;
         public static Texture2D Frog;
         public static Texture2D Second;
+        public static Texture2D Bear;
         public static Random ran;
         public static int ScreenWidth;
         public static int ScreenHeight;
@@ -62,6 +63,7 @@ namespace FrogAndBear
             ButtonExit = Content.Load<Texture2D>("ButtonExit");
             Frog = Content.Load<Texture2D>("Frog");
             Second = Content.Load<Texture2D>("Second");
+            Bear = Content.Load<Texture2D>("bear");
             PublicMember.CurrentScreen = new MenuScreen();
             // TODO: use this.Content to load your game content here
         }

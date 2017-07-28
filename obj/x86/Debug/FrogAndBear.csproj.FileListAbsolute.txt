@@ -25,3 +25,4 @@ c:\users\qweas\documents\visual studio 2015\Projects\FrogAndBear\FrogAndBear\bin
 c:\users\qweas\documents\visual studio 2015\Projects\FrogAndBear\FrogAndBear\obj\x86\Debug\FrogAndBear.csprojResolveAssemblyReference.cache
 C:\Users\qweas\documents\visual studio 2015\Projects\FrogAndBear\FrogAndBear\bin\Windows\x86\Debug\Content\Frog.xnb
 C:\Users\qweas\documents\visual studio 2015\Projects\FrogAndBear\FrogAndBear\bin\Windows\x86\Debug\Content\Second.xnb
+C:\Users\qweas\documents\visual studio 2015\Projects\FrogAndBear\FrogAndBear\bin\Windows\x86\Debug\Content\bear.xnb
